@@ -1,7 +1,3 @@
-
-![file](https://user-images.githubusercontent.com/60061712/120530219-e53aac00-c3fa-11eb-8717-d4b8f8f105ec.gif)
-
-
 # Trajectory Planning of IRB 6620
 
 In the above project, MATLAB scripts were created to study trajectory planning of a 6DOF Manipulator. 
