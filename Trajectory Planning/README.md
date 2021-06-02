@@ -1,7 +1,3 @@
-
-![file](https://user-images.githubusercontent.com/60061712/120530219-e53aac00-c3fa-11eb-8717-d4b8f8f105ec.gif)
-
-
 # Trajectory Planning of IRB 6620
 
 In the above project, MATLAB scripts were created to study trajectory planning of a 6DOF Manipulator. 
@@ -25,3 +21,6 @@ Functions like trapveltraj(), cubicpolytraj(),quinticpolytraj() were used for tr
 Joint space planning method executes faster since Inverse Kinematics is only calculated at the via-points. Also, the actuator motion is smooth and easier to validate. But in joint space, intermediate points are not guaranteed to be collision free or respect joint limits.
 
 Following results are obtained for IRB 6620 -
+
+
+<img src="file.gif" width="540" height="440" />
