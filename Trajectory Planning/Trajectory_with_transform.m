@@ -47,7 +47,7 @@ for w=1:num_via_points-1
         'TimeScaling',[s;sd;sdd]);
      
     for idx=1:numel(traj_time)
-        % Performing inverse kinematic solution
+        % Performing inverse kinematic analysis
         pos=T(:,:,idx);
         [config,sol]=ik('Gripper',pos,ikweights,ikinitguess);
         ikinitguess=config;
