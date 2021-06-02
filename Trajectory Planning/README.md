@@ -16,7 +16,7 @@ Purpose of different MATLAB scripts are as follows-
 
 Using 'Task_vs_Joint_space.m', Trajectory in Joint space and Task space is compared. Path to Path trajectories are visualed, specifically straight line motion. As seen in the Figures, straight line motion in joint space doesnt guarantee straight line path in caartesian space. Comparison is shown in the figure below-
 
-<img src="GIFs/Task vs Joint Space.PNG" width="450" height="350" hspace=15><img src="GIFs/Joint 3 Trajectory.png" width="450" height="350" hspace=15>
+<img src="GIFs/Task vs Joint Space.PNG" width="450" height="350" hspace=15><img src="GIFs/Joint_3 Trajectory.png" width="450" height="350" hspace=15>
        
 MATLAB has extensive list of functions that can be used to perform analysis of robotic systems. For this project, Functions like trapveltraj(), cubicpolytraj(),quinticpolytraj() were used for trapezoidal, cubic and quintic trajectories respectively.
 
