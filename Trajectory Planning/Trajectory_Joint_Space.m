@@ -1,9 +1,10 @@
 % Trajectory Generation in Joint Space (NO ROTATION)
 
 load IRB
+% Define via-point information
 Create_Via_Points
 show(IRB6620_mdh,joint_position_home,'Frames','off','PreservePlot',false);
-% plot_type - 1 for trajectory Points : 2 for Coordinate Frames
+% plot_type - 0 = None,1 = Trajectory, 2 = Coordinate Frames
 plot_type=1;
 hold on
 grid on
@@ -14,6 +15,7 @@ plot3(via_points(1,:),via_points(2,:),via_points(3,:),'ro--');
 
 %% Inverse Kinematic Solver
 
+% creating ik solver
 gik=generalizedInverseKinematics('RigidBodyTree',IRB6620_mdh,...
     'ConstraintInputs',{'position','orientation'});
 
@@ -25,18 +27,21 @@ orient.TargetOrientation=constraint_quat;
 orient.OrientationTolerance = deg2rad(1);
 
 %% Trajectory in Joint Space
+
 ikinitguess=joint_position_home;
 num_via_points=size(via_points,2);
+% Joint values at via points
 joint_val=zeros(num_joints,num_via_points);
 
 for idx=1:num_via_points
+    % solving ik
     pos_tgt.TargetPosition=via_points(:,idx)';
     [config,sol]=gik(ikinitguess,pos_tgt,orient);
     ikinitguess=config;
     joint_val(:,idx)=config';
 end
 
-traj_type='trapezoid';
+traj_type='quintic';
 
 switch traj_type
     
@@ -44,21 +49,27 @@ switch traj_type
         [q,qd,qdd]=trapveltraj(joint_val,numel(traj_time),...
             'AccelTime',repmat(via_point_accl_time,[num_joints 1]),...
             'EndTime',repmat(diff(via_point_time),[num_joints 1]));
+        
     case 'cubic'
         [q,qd,qdd]=cubicpolytraj(joint_val,via_point_time,traj_time,...
             'VelocityBoundaryCondition',zeros(num_joints,num_via_points));
+        
     case 'quintic'
         [q,qd,qdd]=quinticpolytraj(joint_val,via_point_time,traj_time,...
             'VelocityBoundaryCondition',zeros(num_joints,num_via_points),...
             'AccelerationBoundaryCondition',zeros(num_joints,num_via_points));
         
+    otherwise
+        error("Invalid trajectory type! Use ''trapezoid'', ''cubic'' or ''quintic'' ");
 end
 
-%% PLotting the Result
+%% Plotting the Result
 
 for idx=1:numel(traj_time)
+    % pose of end effector at trajectory points
     T=getTransform(IRB6620_mdh,q(:,idx)','Gripper');
     pos=tform2trvec(T);
+    
     if plot_type==1
         set(htraj,'xdata',[htraj.XData pos(1)],...
             'ydata',[htraj.YData pos(2)],...
@@ -67,10 +78,12 @@ for idx=1:numel(traj_time)
         plotTransforms(tform2trvec(T),tform2quat(T),'FrameSize',0.09);
     end
     
+    % visualize the robot
     show(IRB6620_mdh,q(:,idx)','Frames','off','PreservePlot',false);
     title(['Time : ' num2str(traj_time(idx)) 'secs']);
     xlabel("X[m]");
     ylabel("Y[m]");
     zlabel("Z[m]");
     drawnow
+
 end
