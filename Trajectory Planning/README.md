@@ -13,6 +13,8 @@ Purpose of different MATLAB scripts are as follows-
 * IRB.mat -- Contains the Robot Rigid Tree.
 * IRBPosition.mat -- Important Joint and Tool Positions. 
 * Trajectory Planning Report.pdf -- Comprehensive review of all the calculations done regarding Trajectory Planning. 
+
+Using 'Task_vs_Joint_space.m', Trajectory in Joint space and Task space is compared. Path to Path trajectories are visualed, specifically straight line motion. As seen in the Figures, straight line motion in joint space doesnt guarantee straight line path in caartesian space. 
        
 Functions like trapveltraj(), cubicpolytraj(),quinticpolytraj() were used for trapezoidal, cubic and quintic trajectories respectively.
 
