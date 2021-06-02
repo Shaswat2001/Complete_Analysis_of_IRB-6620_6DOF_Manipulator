@@ -3,8 +3,8 @@
 %% Setup
 
 load IRB
+% Define via-point information
 Create_Via_Points
-
 % Plotting the via-points 
 hold on
 grid on
