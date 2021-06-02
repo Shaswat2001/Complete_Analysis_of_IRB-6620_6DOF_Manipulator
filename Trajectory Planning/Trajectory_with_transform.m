@@ -25,16 +25,16 @@ for w=1:num_via_points-1
     Ti=trvec2tform(via_points(:,w)')*eul2tform(orientation(:,w)');
     Tf=trvec2tform(via_points(:,w+1)')*eul2tform(orientation(:,w+1)');
     % time at via points
-    via_time=via_point_time(:,w:w+1);
+    via_time=via_point_time(w:w+1);
     % trajectory time
     traj_time=via_time(1):ts:via_time(2);
     
     % Time scaling 
-    traj_type='cubic';
+    traj_type='trap';
     switch traj_type
         case 'trap'
             [s,sd,sdd] = trapveltraj([0 1],numel(traj_time), ... 
-                'EndTime',diff(timeInterval));
+                'EndTime',diff(via_time));
         case 'cubic'
             [s,sd,sdd] = cubicpolytraj([0 1],via_time,traj_time);
         case 'quintic'
