@@ -1,0 +1,1 @@
+# Kinematic_Dynamic_Analysis_of_IRB6620
