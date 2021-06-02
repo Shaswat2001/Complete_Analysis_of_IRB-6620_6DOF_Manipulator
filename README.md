@@ -1,1 +1,1 @@
-# Kinematic_Dynamic_Analysis_of_IRB6620
+# Complete_Analysis_of_IRB6620
