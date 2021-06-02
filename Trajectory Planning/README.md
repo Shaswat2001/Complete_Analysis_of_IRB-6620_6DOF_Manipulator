@@ -21,3 +21,6 @@ Functions like trapveltraj(), cubicpolytraj(),quinticpolytraj() were used for tr
 Joint space planning method executes faster since Inverse Kinematics is only calculated at the via-points. Also, the actuator motion is smooth and easier to validate. But in joint space, intermediate points are not guaranteed to be collision free or respect joint limits.
 
 Following results are obtained for IRB 6620 -
+
+
+<img src="file.gif" width="540" height="440" />
