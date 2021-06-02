@@ -14,9 +14,11 @@ Purpose of different MATLAB scripts are as follows-
 * IRBPosition.mat -- Important Joint and Tool Positions. 
 * Trajectory Planning Report.pdf -- Comprehensive review of all the calculations done regarding Trajectory Planning. 
 
-Using 'Task_vs_Joint_space.m', Trajectory in Joint space and Task space is compared. Path to Path trajectories are visualed, specifically straight line motion. As seen in the Figures, straight line motion in joint space doesnt guarantee straight line path in caartesian space. 
+Using 'Task_vs_Joint_space.m', Trajectory in Joint space and Task space is compared. Path to Path trajectories are visualed, specifically straight line motion. As seen in the Figures, straight line motion in joint space doesnt guarantee straight line path in caartesian space. Comparison is shown in the figure below-
+
+<img src="GIFs/Task vs Joint Space.PNG" width="450" height="350" hspace=15><img src="GIFs/Joint 3 Trajectory.png" width="450" height="350" hspace=15>
        
-Functions like trapveltraj(), cubicpolytraj(),quinticpolytraj() were used for trapezoidal, cubic and quintic trajectories respectively.
+MATLAB has extensive list of functions that can be used to perform analysis of robotic systems. For this project, Functions like trapveltraj(), cubicpolytraj(),quinticpolytraj() were used for trapezoidal, cubic and quintic trajectories respectively.
 
 ## Joint Space Trajectory Planning:
  
@@ -25,4 +27,15 @@ Joint space planning method executes faster since Inverse Kinematics is only cal
 Following results are obtained for IRB 6620 -
 
 
-<img src="file.gif" width="540" height="440" />
+<img src="GIFs/trap_joint_space.gif" width="500" height="400" />
+
+## Task Space Trajectory Planning:
+ 
+In task space planning, Motion is predictable and offers better handling of obstacles and collisions. But the method is slower since Inverse Kinematics is calculated at every time step. Also, Actuator motion is not necessarily smooth.
+
+Following results are obtained for IRB 6620 -
+
+
+<img src="GIFs/trap_task_space.gif" width="500" height="400" />
+
+<img src="GIFs/cubic_rotation.gif" width="500" height="400" />
