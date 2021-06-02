@@ -7,7 +7,7 @@ plot_type=2;
 show(IRB6620_mdh,joint_position_home);
 hold on
 grid on
-% plot_type - 1 for trajectory Points : 2 for Coordinate Frames
+% plot_type - 0 = None,1 = Trajectory, 2 = Coordinate Frames
 if plot_type==1
     htraj=plot3(via_points(1,1),via_points(2,1),via_points(3,1),'b.-');
 end
@@ -40,7 +40,7 @@ for w=1:num_via_points-1
         case 'quintic'
             [s,sd,sdd] = quinticpolytraj([0 1],via_time,traj_time);
         otherwise
-               disp('Invalid Input');
+               error("Invalid trajectory type! Use ''trapezoid'', ''cubic'' or ''quintic'' ");
     end
     % Transforms obtained from trajectory generation
     [T,V,A]=transformtraj(Ti,Tf,via_time,traj_time,...
