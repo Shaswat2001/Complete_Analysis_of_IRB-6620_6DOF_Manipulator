@@ -26,8 +26,15 @@ Joint space planning method executes faster since Inverse Kinematics is only cal
 
 Following results are obtained for IRB 6620 -
 
-
+* Trapezoidal Trajectory in Joint Space
 <img src="GIFs/trap_joint_space.gif" width="500" height="400" />
+
+* Cubic Trajectory in Joint Space
+<img src="GIFs/cubic_joint_space.gif" width="500" height="400" />
+
+* Quintic Trajectory in Joint Space
+<img src="GIFs/quintic_joint_space.gif" width="500" height="400" />
+
 
 ## Task Space Trajectory Planning:
  
@@ -35,7 +42,23 @@ In task space planning, Motion is predictable and offers better handling of obst
 
 Following results are obtained for IRB 6620 -
 
-
+* Trapezoidal Trajectory in Task Space with No Rotation
 <img src="GIFs/trap_task_space.gif" width="500" height="400" />
 
+* Cubic Trajectory in Task Space with No Rotation
+<img src="GIFs/cubic_task_space.gif" width="500" height="400" />
+
+* Quintic Trajectory in Task Space with No Rotation
+<img src="GIFs/quintic_task_space.gif" width="500" height="400" />
+
+* Trapezoidal Trajectory in Task Space with linear interpolation in Rotation
+<img src="GIFs/trapezoid_rotation.gif" width="500" height="400" />
+
+* Cubic Trajectory in Task Space with linear interpolation in Rotation
 <img src="GIFs/cubic_rotation.gif" width="500" height="400" />
+
+* Quintic Trajectory in Task Space with linear interpolation in Rotation
+<img src="GIFs/quintic_rotation.gif" width="500" height="400" />
+
+* Trapezoidal Trajectory in Task Space with trapezoidal time scaling in Transform matrix
+<img src="GIFs/trapezoid_tranform.gif" width="500" height="400" />
