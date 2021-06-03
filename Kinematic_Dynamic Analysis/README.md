@@ -55,3 +55,8 @@ To perform inverse Dynamics in MATLAB, the mass properties, Centre of mass and I
 The torque is calculated for a quintic trajectory. Inverse Dynamics was also validated in RoboAnalyzer. RoboAnalyzer is an open source, 3D model-based software. To create IRB 6620, DH parameters are entered into the software. Changes were made in DH parameters according to the documentation of RoboAnalyzer. The results plotted are shown in Fig. Joint torque calculated by MATLAB yield the same result to that of RoboAnalyzer.  
 
 <img src="Images/DK_RoboAnalyzer.png"  hspace=250>
+
+## Conclusion
+
+In the above project detailed analytical approach validated with a numerical software approach of IRB 6620 is presented. Complete graphical data is provided to ease the transparency of the process and improve the analysis readability. For numerical validation, MATLAB and RoboAnalyzer software are used. Hence a cross-domain approach to Kinematic and dynamic modelling and analysis of a robot is investigated with supporting graphical and numerical results.
+
