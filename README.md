@@ -22,7 +22,7 @@ To perform Kinematic and Dynamic analysis, both analytical approach and numerica
 
 ## Trajectory Planning
 
-MATLAB is used to perform trajectory planning of IRB 6620. Trapezoidal, quintic and cubic time calings are used in the simulation. 
+MATLAB is used to perform trajectory planning of IRB 6620. Trapezoidal, quintic and cubic time scalings are used in the simulation. 
 
 * Cubic Trajectory in Task Space
 
