@@ -8,17 +8,21 @@ To perform Kinematic and Dynamic analysis, both analytical approach and numerica
 
 * Forward Kinematics in MATLAB:
 
-<img src="Kinematic_Dynamic Analysis/Images/FK_MATLAB.png"  hspace=340>
-
+<p align="center">
+<img src="Kinematic_Dynamic Analysis/Images/FK_MATLAB.png">
+</p>
 
 * Inverse Kinematics in MATLAB:
 
-<img src="Kinematic_Dynamic Analysis/Images/IK_MATLAB.png"  hspace=330>
+<p align="center">
+<img src="Kinematic_Dynamic Analysis/Images/IK_MATLAB.png">
+</p>
 
 * Inverse Dynamics in RoboAnalyzer:
 
-<img src="Kinematic_Dynamic Analysis/Images/DK_RoboAnalyzer.png"  hspace=240>
-
+<p align="center">
+<img src="Kinematic_Dynamic Analysis/Images/DK_RoboAnalyzer.png">
+</p>
 
 ## Trajectory Planning
 
@@ -26,8 +30,12 @@ MATLAB is used to perform trajectory planning of IRB 6620. Trapezoidal, quintic 
 
 * Cubic Trajectory in Task Space
 
-<img src="Trajectory Planning/GIFs/cubic_task_space.gif"  width="450" height="350" hspace=300>
+<p align="center">
+<img src="Trajectory Planning/GIFs/cubic_task_space.gif"  width="450" height="350">
+</p>
 
 * Quintic Trajectory in Joint Space
 
-<img src="Trajectory Planning/GIFs/quintic_joint_space.gif"  width="450" height="350" hspace=300>
+<p align="center">
+<img src="Trajectory Planning/GIFs/quintic_joint_space.gif"  width="450" height="350">
+</p>
